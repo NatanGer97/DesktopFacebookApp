@@ -2,7 +2,7 @@
 
 
 - This project is a final project in Design Patterns course.
-- The App  is a WinForms .NET application that uses Facebook API and written in C# 3
+- The App  is a WinForms .NET application that uses Facebook API and written in C#
 - Includes 2 extra features that dont exist in Facebook
 ##### App Features
 	1. Friend Statistics - get various statistic information about your friends.
