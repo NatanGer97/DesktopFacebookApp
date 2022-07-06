@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C111B791-2856-4DA2-B50B-F04C0F93372D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FacebookAppLogic</RootNamespace>
+    <AssemblyName>FacebookAppLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\Visual Studio Projects\A22 Ex01 Alexi 321043689 Natan  208980524\A22_Ex01_1\A22_Ex01_1.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="CustomListCollection.cs" />
+    <Compile Include="Enums\eNotifyRequest.cs" />
+    <Compile Include="Enums\eGender.cs" />
+    <Compile Include="Enums\eInfoType.cs" />
+    <Compile Include="Enums\eKeys.cs" />
+    <Compile Include="Enums\ePopularity.cs" />
+    <Compile Include="FacebookFacade.cs" />
+    <Compile Include="FriendItem.cs" />
+    <Compile Include="FriendSearcherLogic.cs" />
+    <Compile Include="FriendStatisticsLogic.cs" />
+    <Compile Include="ITitleChangedObserver.cs" />
+    <Compile Include="Post.cs" />
+    <Compile Include="Strategy\CityStatistics.cs" />
+    <Compile Include="Strategy\FavouriteTeamsStatistics.cs" />
+    <Compile Include="Strategy\FriendPopularityStatistics.cs" />
+    <Compile Include="Strategy\GenderStatistics.cs" />
+    <Compile Include="Strategy\IStatisticsStrategy.cs" />
+    <Compile Include="Strategy\LanguagesStatistics.cs" />
+    <Compile Include="Strategy\MostVisitedPlacesStatistics.cs" />
+    <Compile Include="Strategy\PostLikesStatistics.cs" />
+    <Compile Include="Strategy\ReligionStatistics.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Ex02\Submissions\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FbGraphApiWrapper">
+      <HintPath>..\..\..\..\Ex02\Submissions\FbGraphApiWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
