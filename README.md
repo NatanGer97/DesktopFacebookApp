@@ -14,7 +14,6 @@
 - Data Binding
 - Delegates
 - Serialization
-- Working with XML files
 
 #  Design Patterns:
 1. **Singelton**
