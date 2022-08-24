@@ -2,6 +2,7 @@
 
 
 - This project is a final project in Design Patterns course.
+- Focuses on correct and efficient use of OOP principles combined with Design Patterns
 - The App  is a WinForms .NET application that uses Facebook API and written in C#
 - Includes 2 extra features that dont exist in Facebook
 ##### App Features
